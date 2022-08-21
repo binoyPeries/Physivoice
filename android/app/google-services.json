@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "390196989185",
+    "project_id": "physivoice-6043a",
+    "storage_bucket": "physivoice-6043a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390196989185:android:06dd1f6ab473ef5168df00",
+        "android_client_info": {
+          "package_name": "com.physivoice.physivoice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390196989185-fsv42v1lj38ebf6vmcp3f6bu96njh9aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASTe1ZWEeatBTmTdbDsDqpjn7qGuDacJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390196989185-fsv42v1lj38ebf6vmcp3f6bu96njh9aq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
