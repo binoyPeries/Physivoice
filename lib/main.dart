@@ -12,7 +12,6 @@ class PhysivoiceApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("dfz");
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
