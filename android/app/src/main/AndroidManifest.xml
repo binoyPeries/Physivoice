@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.physivoice.physivoice">
    <application
-        android:label="physivoice"
+        android:label="Physivoice"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

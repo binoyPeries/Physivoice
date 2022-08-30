@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(PhysivoiceApp());
+  runApp(const PhysivoiceApp());
 }
 
 class PhysivoiceApp extends StatelessWidget {
@@ -16,7 +17,7 @@ class PhysivoiceApp extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(),
-          body: Container(),
+          body: const Center(child: Text("Haiii, :)")),
         ),
       ),
       localizationsDelegates: const [
