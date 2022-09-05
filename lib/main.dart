@@ -17,7 +17,11 @@ class PhysivoiceApp extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(),
-          body: const Center(child: Text("Haiii, :)")),
+          body: const Center(
+            child: Text(
+              "Haiii, :)",
+            ),
+          ),
         ),
       ),
       localizationsDelegates: const [

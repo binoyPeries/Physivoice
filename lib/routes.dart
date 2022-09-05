@@ -4,6 +4,14 @@ abstract class PhysivoiceRoutes {
   //  path names
   static const String example = "/";
 
+  static List<GoRoute> get routes {
+    return [
+      ...commonRoutes,
+      ...patientRoutes,
+      ...doctorRoutes,
+    ];
+  }
+
   static List<GoRoute> get commonRoutes {
     return [
       //:TODO follow this format
