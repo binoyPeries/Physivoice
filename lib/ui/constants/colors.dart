@@ -6,6 +6,10 @@ abstract class PhysivoiceColors {
   static const Color tertiaryColor = Color(0xFF333CB9);
   static const Color hintColor = Color(0xFFADAEB7);
 
+  // random colors
+  static const Color gradientCandidate1 = Color(0xFF8B90C4);
+  static const Color gradientCandidate2 = Color(0xFF5B46BA);
+
   static MaterialColor primaryMaterialColor =
       MaterialColor(primaryColor.value, const {
     50: Color.fromRGBO(80, 89, 207, .1),

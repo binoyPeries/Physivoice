@@ -8,7 +8,7 @@ class RouterErrorPage extends StatelessWidget {
     return const SafeArea(
       child: Scaffold(
         body: Center(
-          child: Text("Requested screen doesn't exists."),
+          child: Text("Requested screen doesn't exist."),
         ),
       ),
     );
