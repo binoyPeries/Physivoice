@@ -10,6 +10,12 @@ class PhysivoiceTheme {
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: PhysivoiceColors.primaryColor,
+            width: 1.0,
+          ),
+        ),
+        enabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: PhysivoiceColors.tertiaryColor,
             width: 0.5,
           ),
         ),
