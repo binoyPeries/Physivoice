@@ -1,4 +1,5 @@
 import "package:go_router/go_router.dart";
+import 'package:physivoice/ui/common/welcome_page.dart';
 
 abstract class PhysivoiceRoutes {
   //  path names
@@ -16,6 +17,7 @@ abstract class PhysivoiceRoutes {
     return [
       //:TODO follow this format
       // GoRoute(path: example, builder: (_, __) => const CustomerListPage()),
+      GoRoute(path: '/', builder: (_, __) => const WelcomePage()),
     ];
   }
 
