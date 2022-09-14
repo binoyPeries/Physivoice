@@ -4,6 +4,7 @@ import 'package:physivoice/ui/common/welcome_page.dart';
 abstract class PhysivoiceRoutes {
   //  path names
   static const String example = "/";
+  static const String welcomePage = "/";
 
   static List<GoRoute> get routes {
     return [
@@ -17,7 +18,7 @@ abstract class PhysivoiceRoutes {
     return [
       //:TODO follow this format
       // GoRoute(path: example, builder: (_, __) => const CustomerListPage()),
-      GoRoute(path: '/', builder: (_, __) => const WelcomePage()),
+      GoRoute(path: welcomePage, builder: (_, __) => const WelcomePage()),
     ];
   }
 
