@@ -17,7 +17,6 @@ class PhysivoiceApp extends StatelessWidget {
   PhysivoiceApp({Key? key}) : super(key: key);
 
   final _router = GoRouter(
-    initialLocation: '/',
     routes: PhysivoiceRoutes.routes,
     errorBuilder: (_, __) => const RouterErrorPage(),
   );
