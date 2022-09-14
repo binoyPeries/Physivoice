@@ -32,23 +32,42 @@ class WelcomePage extends StatelessWidget {
                 //TODO: common text widget
                 const Text(
                   "Welcome!",
-                  style: TextStyle(fontSize: 24),
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.white,
+                  ),
                 ),
                 const Text(
                   " Please select your role.",
-                  style: TextStyle(fontSize: 24),
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 CommonButton(
+                  width: 200,
+                  height: 50,
                   fontSize: 18,
                   text: "Doctor",
                   textColor: Colors.white,
                   onPressed: () => context.push("/login"),
                   buttonColor: PhysivoiceColors.primaryColor,
                 ),
-                FloatingActionButton(
-                  child: Text("Patient"),
+                const SizedBox(
+                  height: 20,
+                ),
+                CommonButton(
+                  width: 200,
+                  height: 50,
+                  fontSize: 18,
+                  text: "Patient",
+                  textColor: Colors.white,
                   onPressed: () => context.push("/login"),
-                )
+                  buttonColor: PhysivoiceColors.primaryColor,
+                ),
               ],
             ),
           ),
