@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:physivoice/routes.dart';
 import 'package:physivoice/theme.dart';
-import 'package:physivoice/ui/common/router_error_page.dart';
+import 'package:physivoice/ui/common/pages/router_error_page.dart';
 
 import 'generated/l10n.dart';
 
