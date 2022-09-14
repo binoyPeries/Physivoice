@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:physivoice/ui/common/components/default_app_bar.dart';
-import 'package:physivoice/ui/common/components/defualt_scaffold.dart';
+import 'package:physivoice/ui/common/components/default_scaffold.dart';
 import 'package:physivoice/ui/common/forms/text_input_form_field.dart';
 
 class UserLoginPage extends StatelessWidget {
