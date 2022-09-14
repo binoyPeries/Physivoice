@@ -16,9 +16,11 @@ class WelcomePage extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              PhysivoiceColors.tertiaryColor,
-              PhysivoiceColors.gradientCandidate2,
-              PhysivoiceColors.gradientCandidate1,
+              Colors.white,
+              Colors.white,
+              // PhysivoiceColors.tertiaryColor,
+              // PhysivoiceColors.gradientCandidate2,
+              // PhysivoiceColors.gradientCandidate1,
             ],
           ),
         ),
@@ -29,19 +31,22 @@ class WelcomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.asset(
+                  "assets/images/logo.png",
+                ),
                 //TODO: common text widget
                 const Text(
                   "Welcome!",
                   style: TextStyle(
                     fontSize: 24,
-                    color: Colors.white,
+                    color: PhysivoiceColors.secondaryColor,
                   ),
                 ),
                 const Text(
                   " Please select your role.",
                   style: TextStyle(
                     fontSize: 24,
-                    color: Colors.white,
+                    color: PhysivoiceColors.secondaryColor,
                   ),
                 ),
                 const SizedBox(
