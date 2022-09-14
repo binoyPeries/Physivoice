@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:physivoice/routes.dart';
 import 'package:physivoice/ui/constants/colors.dart';
 
 import 'components/common_button.dart';
@@ -58,7 +59,7 @@ class WelcomePage extends StatelessWidget {
                   fontSize: 18,
                   text: "Doctor",
                   textColor: Colors.white,
-                  onPressed: () => context.push("/login"),
+                  onPressed: () => context.push(PhysivoiceRoutes.userLogin),
                   buttonColor: PhysivoiceColors.primaryColor,
                 ),
                 const SizedBox(
@@ -70,7 +71,7 @@ class WelcomePage extends StatelessWidget {
                   fontSize: 18,
                   text: "Patient",
                   textColor: Colors.white,
-                  onPressed: () => context.push("/login"),
+                  onPressed: () => context.push(PhysivoiceRoutes.userLogin),
                   buttonColor: PhysivoiceColors.primaryColor,
                 ),
               ],
