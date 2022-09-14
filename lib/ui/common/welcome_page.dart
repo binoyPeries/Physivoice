@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:physivoice/ui/constants/colors.dart';
+
+import 'components/common_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -21,19 +24,33 @@ class WelcomePage extends StatelessWidget {
         ),
         child: Scaffold(
           backgroundColor: Colors.transparent,
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Welcome!",
-                style: TextStyle(fontSize: 24),
-              ),
-              Text(
-                " Please select your role.",
-                style: TextStyle(fontSize: 24),
-              ),
-            ],
+          body: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //TODO: common text widget
+                const Text(
+                  "Welcome!",
+                  style: TextStyle(fontSize: 24),
+                ),
+                const Text(
+                  " Please select your role.",
+                  style: TextStyle(fontSize: 24),
+                ),
+                CommonButton(
+                  fontSize: 18,
+                  text: "Doctor",
+                  textColor: Colors.white,
+                  onPressed: () => context.push("/login"),
+                  buttonColor: PhysivoiceColors.primaryColor,
+                ),
+                FloatingActionButton(
+                  child: Text("Patient"),
+                  onPressed: () => context.push("/login"),
+                )
+              ],
+            ),
           ),
         ),
       ),
