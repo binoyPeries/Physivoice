@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:physivoice/ui/constants/colors.dart';
 
-class CommonButton extends StatelessWidget {
+class DefaultElevatedButton extends StatelessWidget {
   final Color buttonColor;
   final Color textColor;
   final String text;
@@ -10,7 +10,7 @@ class CommonButton extends StatelessWidget {
   final double height;
   final Function onPressed;
 
-  const CommonButton({
+  const DefaultElevatedButton({
     Key? key,
     required this.onPressed,
     required this.text,

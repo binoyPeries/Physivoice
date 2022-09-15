@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:physivoice/routes.dart';
+import 'package:physivoice/ui/constants/assets.dart';
 import 'package:physivoice/ui/constants/colors.dart';
 
-import '../components/common_button.dart';
+import '../components/default_elevated_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -33,7 +34,7 @@ class WelcomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  "assets/images/logo.png",
+                  PhysivoiceImageAssets.physivoiceLogo,
                 ),
                 //TODO: common text widget
                 const Text(
@@ -53,14 +54,14 @@ class WelcomePage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                CommonButton(
+                DefaultElevatedButton(
                   text: "Doctor",
                   onPressed: () => context.push(PhysivoiceRoutes.userLogin),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                CommonButton(
+                DefaultElevatedButton(
                   text: "Patient",
                   onPressed: () => context.push(PhysivoiceRoutes.userLogin),
                 ),
