@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:physivoice/ui/constants/colors.dart';
 
 class CommonButton extends StatelessWidget {
   final Color buttonColor;
@@ -11,13 +12,13 @@ class CommonButton extends StatelessWidget {
 
   const CommonButton({
     Key? key,
-    required this.buttonColor,
-    required this.textColor,
     required this.onPressed,
     required this.text,
-    required this.fontSize,
-    required this.width,
-    required this.height,
+    this.buttonColor = PhysivoiceColors.tertiaryColor,
+    this.textColor = Colors.white,
+    this.fontSize = 18,
+    this.width = 250,
+    this.height = 50,
   }) : super(key: key);
 
   @override

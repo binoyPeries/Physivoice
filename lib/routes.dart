@@ -1,6 +1,6 @@
 import "package:go_router/go_router.dart";
 import 'package:physivoice/ui/common/pages/user_login_page.dart';
-import 'package:physivoice/ui/common/welcome_page.dart';
+import 'package:physivoice/ui/common/pages/welcome_page.dart';
 
 abstract class PhysivoiceRoutes {
   //  path names

@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:physivoice/routes.dart';
 import 'package:physivoice/ui/constants/colors.dart';
 
-import 'components/common_button.dart';
+import '../components/common_button.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -54,25 +54,15 @@ class WelcomePage extends StatelessWidget {
                   height: 20,
                 ),
                 CommonButton(
-                  width: 200,
-                  height: 50,
-                  fontSize: 18,
                   text: "Doctor",
-                  textColor: Colors.white,
                   onPressed: () => context.push(PhysivoiceRoutes.userLogin),
-                  buttonColor: PhysivoiceColors.primaryColor,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 CommonButton(
-                  width: 200,
-                  height: 50,
-                  fontSize: 18,
                   text: "Patient",
-                  textColor: Colors.white,
                   onPressed: () => context.push(PhysivoiceRoutes.userLogin),
-                  buttonColor: PhysivoiceColors.primaryColor,
                 ),
               ],
             ),
