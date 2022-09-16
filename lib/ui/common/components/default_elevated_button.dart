@@ -6,7 +6,6 @@ class DefaultElevatedButton extends StatelessWidget {
   final Color textColor;
   final String text;
   final double fontSize;
-  final double width;
   final double height;
   final Function onPressed;
 
@@ -17,15 +16,13 @@ class DefaultElevatedButton extends StatelessWidget {
     this.buttonColor = PhysivoiceColors.tertiaryColor,
     this.textColor = Colors.white,
     this.fontSize = 18,
-    this.width = 250,
-    this.height = 50,
+    this.height = 45,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: height,
-      width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: buttonColor,

@@ -12,61 +12,70 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Colors.white,
-              Colors.white,
-              // PhysivoiceColors.tertiaryColor,
-              // PhysivoiceColors.gradientCandidate2,
-              // PhysivoiceColors.gradientCandidate1,
-            ],
+      child: Scaffold(
+        body: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colors.white,
+                Colors.white,
+                // PhysivoiceColors.tertiaryColor,
+                // PhysivoiceColors.gradientCandidate2,
+                // PhysivoiceColors.gradientCandidate1,
+              ],
+            ),
           ),
-        ),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          body: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  PhysivoiceImageAssets.physivoiceLogo,
-                ),
-                //TODO: common text widget
-                const Text(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                PhysivoiceImageAssets.physivoiceLogo,
+                height: 200.0,
+                fit: BoxFit.contain,
+              ),
+              const Center(
+                child: Text(
                   "Welcome!",
                   style: TextStyle(
                     fontSize: 24,
                     color: PhysivoiceColors.secondaryColor,
                   ),
                 ),
-                const Text(
+              ),
+              const Center(
+                child: Text(
                   " Please select your role.",
                   style: TextStyle(
                     fontSize: 24,
                     color: PhysivoiceColors.secondaryColor,
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                DefaultElevatedButton(
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                child: DefaultElevatedButton(
                   text: "Doctor",
                   onPressed: () => context.push(PhysivoiceRoutes.userLogin),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                DefaultElevatedButton(
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                child: DefaultElevatedButton(
                   text: "Patient",
                   onPressed: () => context.push(PhysivoiceRoutes.userLogin),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
