@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:physivoice/routes.dart';
 import 'package:physivoice/ui/constants/assets.dart';
 import 'package:physivoice/ui/constants/colors.dart';
+import 'package:physivoice/ui/constants/enums.dart';
 
 import '../components/default_elevated_button.dart';
 
@@ -62,7 +63,8 @@ class WelcomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: DefaultElevatedButton(
                   text: "Doctor",
-                  onPressed: () => context.push(PhysivoiceRoutes.userLogin),
+                  onPressed: () => context
+                      .push(PhysivoiceRoutes.userLoginPath(UserRoles.doctor)),
                 ),
               ),
               const SizedBox(
@@ -72,7 +74,8 @@ class WelcomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: DefaultElevatedButton(
                   text: "Patient",
-                  onPressed: () => context.push(PhysivoiceRoutes.userLogin),
+                  onPressed: () => context
+                      .push(PhysivoiceRoutes.userLoginPath(UserRoles.patient)),
                 ),
               ),
             ],

@@ -3,9 +3,11 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:physivoice/ui/common/components/default_app_bar.dart';
 import 'package:physivoice/ui/common/components/default_scaffold.dart';
 import 'package:physivoice/ui/common/forms/text_input_form_field.dart';
+import 'package:physivoice/ui/constants/enums.dart';
 
 class UserLoginPage extends StatelessWidget {
-  const UserLoginPage({Key? key}) : super(key: key);
+  final UserRoles role;
+  const UserLoginPage({Key? key, required this.role}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

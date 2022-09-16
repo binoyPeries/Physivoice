@@ -1,11 +1,13 @@
+import 'package:flutter/foundation.dart';
 import "package:go_router/go_router.dart";
 import 'package:physivoice/ui/common/pages/user_login_page.dart';
 import 'package:physivoice/ui/common/pages/welcome_page.dart';
+import 'package:physivoice/ui/constants/enums.dart';
 
 abstract class PhysivoiceRoutes {
   //  path names
-  static const String userLogin = "/login";
   static const String welcome = "/";
+  static const String userLogin = "/login/:role";
 
   static List<GoRoute> get routes {
     return [
@@ -15,12 +17,17 @@ abstract class PhysivoiceRoutes {
     ];
   }
 
+  static UserRoles _getUserRole(GoRouterState state) {
+    String role = state.params["role"] as String;
+    return UserRoles.values.firstWhere((e) => describeEnum(e) == role);
+  }
+
   static List<GoRoute> get commonRoutes {
     return [
-      //:TODO follow this format
-      // GoRoute(path: example, builder: (_, __) => const CustomerListPage()),
       GoRoute(path: welcome, builder: (_, __) => const WelcomePage()),
-      GoRoute(path: userLogin, builder: (_, __) => const UserLoginPage()),
+      GoRoute(
+          path: userLogin,
+          builder: (_, state) => UserLoginPage(role: _getUserRole(state))),
     ];
   }
 
@@ -30,5 +37,9 @@ abstract class PhysivoiceRoutes {
 
   static List<GoRoute> get doctorRoutes {
     return [];
+  }
+
+  static String userLoginPath(UserRoles role) {
+    return userLogin.replaceFirst(":role", role.name.toString());
   }
 }
