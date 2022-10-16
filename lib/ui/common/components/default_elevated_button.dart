@@ -1,30 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:physivoice/ui/constants/colors.dart';
 
-class CommonButton extends StatelessWidget {
+class DefaultElevatedButton extends StatelessWidget {
   final Color buttonColor;
   final Color textColor;
   final String text;
   final double fontSize;
-  final double width;
   final double height;
   final Function onPressed;
 
-  const CommonButton({
+  const DefaultElevatedButton({
     Key? key,
-    required this.buttonColor,
-    required this.textColor,
     required this.onPressed,
     required this.text,
-    required this.fontSize,
-    required this.width,
-    required this.height,
+    this.buttonColor = PhysivoiceColors.tertiaryColor,
+    this.textColor = Colors.white,
+    this.fontSize = 18,
+    this.height = 45,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: height,
-      width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: buttonColor,
